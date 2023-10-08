@@ -24,6 +24,9 @@ const search = async (searchTerm: string) => {
     `https://serpapi.com/search.json?q=${searchTerm}&api_key=${process.env.API_KEY}`
   )
 
+  // Error example
+  // throw new Error("WHOOPS something broke");
+
   const data: SearchResults = await res.json();
   return data;
 }
